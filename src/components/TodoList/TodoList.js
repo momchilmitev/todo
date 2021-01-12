@@ -6,6 +6,11 @@ const TodoList = () => {
   return (
     <main className="todo__main">
       <ul className="todo__list">
+        <Todo check={true} />
+        <Todo />
+        <Todo />
+        <Todo />
+        <Todo />
         <Todo />
       </ul>
       <div className="todo__actions">
