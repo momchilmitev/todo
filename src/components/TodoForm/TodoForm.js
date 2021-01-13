@@ -2,7 +2,7 @@ import "./TodoForm.scss";
 
 const TodoForm = () => {
   return (
-    <form className="todo__form">
+    <form className="todo__form todo__form--dark">
       <input
         className="todo__input"
         type="text"

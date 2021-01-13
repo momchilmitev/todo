@@ -13,6 +13,16 @@
     color: #fff;
   }
 
+  &__theme-switcher {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__title {
+    font-size: 26px;
+    letter-spacing: 10px;
+  }
+
   &__footer {
     margin-top: 104px;
     text-align: center;
@@ -28,6 +38,33 @@
   &--dark {
     background-color: #171823;
     background-image: url("../../assets/images/bg-mobile-dark.jpg");
+
+    & .todo__input,
+    .todo__main,
+    .filters {
+      background: #25273d;
+      box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    & .todo__item {
+      background: #25273d;
+      color: #c8cbe7;
+
+      &--checked {
+        color: #4d5067;
+      }
+    }
+
+    & .check-btn,
+    .todo__item {
+      border-color: #393a4b;
+    }
+
+    & .todo__actions,
+    .filters,
+    .todo__footer {
+      color: #5b5e7e;
+    }
   }
 }
 
