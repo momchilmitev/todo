@@ -9,15 +9,22 @@ import moon from "../../assets/icons/icon-moon.svg";
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
 
+  const toggleDarkTheme = () => {
+    setDarkTheme(!darkTheme);
+  };
+
+  let className = darkTheme ? "todo todo--dark" : "todo";
+
   return (
-    <div className="todo todo--dark">
+    <div className={className}>
       <div className="container">
         <header className="todo__header">
           <h1 className="todo__title">TODO</h1>
           <img
             className="todo__theme-switcher"
-            src={sun}
+            src={darkTheme ? moon : sun}
             alt="theme-switcher icon"
+            onClick={toggleDarkTheme}
           />
         </header>
         <TodoForm />
