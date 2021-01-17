@@ -2,7 +2,7 @@ import "./TodoList.scss";
 import Todo from "../Todo/Todo";
 import Filters from "../Filters/Filters";
 
-const TodoList = ({ todos, filterTodos, toggleTodo, deleteTodo }) => {
+const TodoList = ({ todos, setFilter, toggleTodo, deleteTodo, filter }) => {
   const renderTodos = () => {
     if (todos.length === 0) {
       return <div className="empty">No todos</div>;
@@ -23,7 +23,7 @@ const TodoList = ({ todos, filterTodos, toggleTodo, deleteTodo }) => {
       <ul className="todo__list">{renderTodos()}</ul>
       <div className="todo__actions">
         <span className="todo__count">5 items left</span>
-        <Filters filterTodos={filterTodos} />
+        <Filters filter={filter} setFilter={setFilter} />
         <span className="todo__clear--completed">Clear Completed</span>
       </div>
     </main>

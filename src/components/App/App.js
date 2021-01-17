@@ -8,6 +8,7 @@ import moon from "../../assets/icons/icon-moon.svg";
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const [filter, setFilter] = useState("all");
   const [darkTheme, setDarkTheme] = useState(false);
 
   const toggleDarkTheme = () => {
@@ -34,14 +35,14 @@ function App() {
 
   const filterTodos = (filter) => {
     switch (filter) {
+      case "all":
+        return todos;
       case "active":
-        setTodos(todos.filter((todo) => todo.completed === false));
-        break;
+        return todos.filter((todo) => todo.completed === false);
       case "completed":
-        setTodos(todos.filter((todo) => todo.completed === true));
-        break;
+        return todos.filter((todo) => todo.completed === true);
       default:
-        setTodos(todos);
+        return todos;
     }
   };
 
@@ -65,10 +66,11 @@ function App() {
         </header>
         <TodoForm addTodo={addTodo} />
         <TodoList
-          todos={todos}
-          filterTodos={filterTodos}
+          todos={filterTodos(filter)}
+          setFilter={setFilter}
           toggleTodo={toggleTodo}
           deleteTodo={deleteTodo}
+          filter={filter}
         />
         <footer className="todo__footer">Drag and drop to reorder list</footer>
       </div>

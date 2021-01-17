@@ -1,23 +1,23 @@
 import "./Filters.scss";
 
-const Filters = ({ filterTodos }) => {
+const Filters = ({ filter, setFilter }) => {
   return (
     <div className="filters">
       <span
-        onClick={() => filterTodos("")}
-        className="filter filter--all active"
+        onClick={() => setFilter("all")}
+        className={filter === "all" ? "filter active" : "filter"}
       >
         All
       </span>
       <span
-        onClick={() => filterTodos("active")}
-        className="filter filter--active"
+        onClick={() => setFilter("active")}
+        className={filter === "active" ? "filter active" : "filter"}
       >
         Active
       </span>
       <span
-        onClick={() => filterTodos("completed")}
-        className="filter filter--completed"
+        onClick={() => setFilter("completed")}
+        className={filter === "completed" ? "filter active" : "filter"}
       >
         Completed
       </span>
