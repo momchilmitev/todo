@@ -22,6 +22,7 @@ function App() {
       text: e.target[0].value,
       completed: false,
     };
+    e.target[0].value = 0;
     setTodos([...todos, todo]);
   };
 
@@ -76,6 +77,7 @@ function App() {
           deleteTodo={deleteTodo}
           filter={filter}
           deleteCompleted={deleteCompleted}
+          setTodos={setTodos}
         />
         <footer className="todo__footer">Drag and drop to reorder list</footer>
       </div>

@@ -16,6 +16,10 @@
   &__theme-switcher {
     width: 20px;
     height: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__title {

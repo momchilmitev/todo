@@ -13,6 +13,10 @@
   color: #494c6b;
   border-bottom: 1px solid #e3e4f1;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &--checked {
     text-decoration: line-through;
     color: #d1d2da;

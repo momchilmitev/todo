@@ -20,6 +20,10 @@
   & > span {
     padding: 0 10px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &.active {
       color: #3a7cfd;
     }

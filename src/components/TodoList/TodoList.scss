@@ -22,6 +22,10 @@
     letter-spacing: -0.166667px;
     color: #9495a5;
   }
+
+  &__clear--completed:hover {
+    cursor: pointer;
+  }
 }
 
 .empty {
