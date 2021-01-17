@@ -50,6 +50,10 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const deleteCompleted = () => {
+    setTodos(todos.filter((todo) => todo.completed !== true));
+  };
+
   let className = darkTheme ? "todo todo--dark" : "todo";
 
   return (
@@ -71,6 +75,7 @@ function App() {
           toggleTodo={toggleTodo}
           deleteTodo={deleteTodo}
           filter={filter}
+          deleteCompleted={deleteCompleted}
         />
         <footer className="todo__footer">Drag and drop to reorder list</footer>
       </div>
