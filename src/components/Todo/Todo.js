@@ -1,12 +1,19 @@
 import "./Todo.scss";
 
-const Todo = ({ check }) => {
+const Todo = ({ todo, toggleTodo }) => {
   return (
-    <li className={check ? "todo__item todo__item--checked" : "todo__item"}>
+    <li
+      className={
+        todo.completed ? "todo__item todo__item--checked" : "todo__item"
+      }
+    >
       <span
-        className={check ? "check-btn check-btn--checked" : "check-btn"}
+        className={
+          todo.completed ? "check-btn check-btn--checked" : "check-btn"
+        }
+        onClick={() => toggleTodo(todo.id)}
       ></span>
-      Todo
+      {todo.text}
       <span className="delete-btn"></span>
     </li>
   );

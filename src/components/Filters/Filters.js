@@ -1,11 +1,26 @@
 import "./Filters.scss";
 
-const Filters = () => {
+const Filters = ({ filterTodos }) => {
   return (
     <div className="filters">
-      <span className="filter filter--all active">All</span>
-      <span className="filter filter--active">Active</span>
-      <span className="filter filter--completed">Completed</span>
+      <span
+        onClick={() => filterTodos("")}
+        className="filter filter--all active"
+      >
+        All
+      </span>
+      <span
+        onClick={() => filterTodos("active")}
+        className="filter filter--active"
+      >
+        Active
+      </span>
+      <span
+        onClick={() => filterTodos("completed")}
+        className="filter filter--completed"
+      >
+        Completed
+      </span>
     </div>
   );
 };

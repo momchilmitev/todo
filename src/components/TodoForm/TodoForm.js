@@ -1,8 +1,8 @@
 import "./TodoForm.scss";
 
-const TodoForm = () => {
+const TodoForm = ({ addTodo }) => {
   return (
-    <form className="todo__form todo__form--dark">
+    <form className="todo__form todo__form--dark" onSubmit={addTodo}>
       <input
         className="todo__input"
         type="text"
