@@ -1,6 +1,6 @@
 import "./Todo.scss";
 
-const Todo = ({ todo, toggleTodo }) => {
+const Todo = ({ todo, toggleTodo, deleteTodo }) => {
   return (
     <li
       className={
@@ -14,7 +14,7 @@ const Todo = ({ todo, toggleTodo }) => {
         onClick={() => toggleTodo(todo.id)}
       ></span>
       {todo.text}
-      <span className="delete-btn"></span>
+      <span className="delete-btn" onClick={() => deleteTodo(todo.id)}></span>
     </li>
   );
 };

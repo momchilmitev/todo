@@ -45,6 +45,10 @@ function App() {
     }
   };
 
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   let className = darkTheme ? "todo todo--dark" : "todo";
 
   return (
@@ -64,6 +68,7 @@ function App() {
           todos={todos}
           filterTodos={filterTodos}
           toggleTodo={toggleTodo}
+          deleteTodo={deleteTodo}
         />
         <footer className="todo__footer">Drag and drop to reorder list</footer>
       </div>

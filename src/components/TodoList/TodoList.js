@@ -2,13 +2,18 @@ import "./TodoList.scss";
 import Todo from "../Todo/Todo";
 import Filters from "../Filters/Filters";
 
-const TodoList = ({ todos, filterTodos, toggleTodo }) => {
+const TodoList = ({ todos, filterTodos, toggleTodo, deleteTodo }) => {
   const renderTodos = () => {
     if (todos.length === 0) {
       return <div className="empty">No todos</div>;
     } else {
       return todos.map((todo) => (
-        <Todo key={todo.id} todo={todo} toggleTodo={toggleTodo} />
+        <Todo
+          key={todo.id}
+          todo={todo}
+          toggleTodo={toggleTodo}
+          deleteTodo={deleteTodo}
+        />
       ));
     }
   };
