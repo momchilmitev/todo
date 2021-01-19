@@ -76,3 +76,17 @@
   width: 327px;
   margin: 0 auto;
 }
+
+@media (min-width: 768px) {
+  .todo {
+    background-image: url("../../assets/images/bg-desktop-light.jpg");
+
+    &--dark {
+      background-image: url("../../assets/images/bg-desktop-dark.jpg");
+    }
+  }
+
+  .container {
+    width: 540px;
+  }
+}

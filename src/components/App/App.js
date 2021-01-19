@@ -22,7 +22,7 @@ function App() {
       text: e.target[0].value,
       completed: false,
     };
-    e.target[0].value = 0;
+    e.target[0].value = "";
     setTodos([...todos, todo]);
   };
 
