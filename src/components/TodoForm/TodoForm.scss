@@ -15,5 +15,17 @@
     line-height: 12px;
     letter-spacing: -0.166667px;
     color: #9495a5;
+
+    &:focus {
+      color: #393a4b;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .todo {
+    &__input {
+      font-size: 18px;
+    }
   }
 }
